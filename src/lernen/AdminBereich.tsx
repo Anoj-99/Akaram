@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import { datenquelle } from "../lib/datenquelle";
+import { oeffentlicheBasisUrl } from "../lib/oeffentlicheUrl";
 import { Schule, SchuelerUebersicht } from "../lib/typen";
 
 // Admin: legt Schulen an und lädt Schulleiter ein. Die "Einladung per
@@ -63,7 +64,7 @@ export default function AdminBereich() {
     const betreff = encodeURIComponent("Dein Akaram-Schulleiter-Zugang");
     const text = encodeURIComponent(
       `Hallo,\n\ndein Schulleiter-Konto für Akaram ist eingerichtet.\n` +
-        `Benutzername: ${username}\nAnmeldung: ${window.location.origin}\n\n` +
+        `Benutzername: ${username}\nAnmeldung: ${oeffentlicheBasisUrl()}\n\n` +
         `Deinen Schul-Code für die Lehrer-Registrierung findest du nach der Anmeldung im Bereich „Schule“.\n\nViele Grüße`,
     );
     return `mailto:${email}?subject=${betreff}&body=${text}`;

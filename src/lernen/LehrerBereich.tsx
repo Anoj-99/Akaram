@@ -7,6 +7,7 @@ import {
   poolThemen,
 } from "../data/hausaufgabenPool";
 import { Lektion, LektionBuchstabe, lektionen } from "../data/lektionen";
+import { oeffentlicheBasisUrl } from "../lib/oeffentlicheUrl";
 import {
   Konsonant,
   konsonanten,
@@ -766,7 +767,7 @@ function LehrerCodeKarte({ konto }: { konto: Konto }) {
 
   useEffect(() => {
     if (!konto.lehrerCode) return;
-    const url = `${window.location.origin}${window.location.pathname}?code=${konto.lehrerCode}`;
+    const url = `${oeffentlicheBasisUrl()}${window.location.pathname}?code=${konto.lehrerCode}`;
     QRCode.toDataURL(url, { width: 240, margin: 1 })
       .then(setQrBild)
       .catch(() => {});

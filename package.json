@@ -11,6 +11,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@capacitor/cli": "^8.5.1",
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/ios": "^8.5.1",
     "@fontsource/noto-sans-tamil": "^5.2.7",
     "@supabase/supabase-js": "^2.110.1",
     "qrcode": "^1.5.4",
