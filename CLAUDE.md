@@ -25,6 +25,11 @@ Details zur Struktur: `docs/PLANUNG.md`, Einrichtung/Deployment: `README.md`.
 - **Assets fehlen noch:** echte Illustrationen statt
   `public/lektionen/platzhalter.svg`, Audio-Aufnahmen der 247 Zeichen
   (aktuell Web Speech API), Maskottchen-Illustrationen (aktuell Emoji).
-- **Supabase:** neue Abschnitte in `supabase/schema.sql` (Level,
-  Challenge, Rollen/Schulen) müssen einmalig im SQL-Editor der
-  Produktions-Datenbank ausgeführt werden.
+- **Supabase (16.09.2026 umgestellt):** `supabase/schema.sql` ist abgelöst.
+  Schema-Änderungen jetzt als neue, datierte Datei unter
+  `supabase/migrations/` anlegen (fünf bestehende Migrationen rekonstruiert
+  aus der Git-Historie, byte-identisch zur alten schema.sql geprüft). Für
+  eine neue Änderung: `supabase/migrations/YYYYMMDDHHMMSS_kurzname.sql`
+  anlegen, committen, pushen – **nicht** mehr manuell im SQL-Editor
+  ausführen. Voraussetzung für automatische Anwendung: Supabase-GitHub-
+  Integration muss im Dashboard aktiviert sein (Stand 16.09. ungeprüft).

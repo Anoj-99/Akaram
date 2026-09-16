@@ -1,4 +1,11 @@
 -- Tamil-Lernen: Datenbankschema
+--
+-- ACHTUNG (16.09.2026): Diese Datei ist ABGELÖST als Quelle der Wahrheit.
+-- Der vollständige Inhalt wurde 1:1 in fünf datierte Dateien unter
+-- supabase/migrations/ überführt (verifiziert byte-identisch). Neue
+-- Schema-Änderungen bitte als NEUE Migration unter supabase/migrations/
+-- anlegen, nicht hier anhängen. Diese Datei bleibt nur als Referenz stehen.
+--
 -- Einmalig im Supabase SQL-Editor ausführen (neues, eigenes Projekt,
 -- getrennt von TamilConnect).
 --
