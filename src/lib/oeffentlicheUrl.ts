@@ -9,9 +9,7 @@
 // nativ stattdessen die echte, öffentliche Domain fest hinterlegt.
 import { Capacitor } from "@capacitor/core";
 
-// TODO(Domain-Kauf ~15./16.09.): durch die echte Domain ersetzen, z. B.
-// "https://akaram.study". Danach hier nur diese eine Zeile ändern.
-const OEFFENTLICHE_DOMAIN_NATIV = "https://dummy-platzhalter.akaram-app.de";
+const OEFFENTLICHE_DOMAIN_NATIV = "https://akaram.app";
 
 export function oeffentlicheBasisUrl(): string {
   if (Capacitor.isNativePlatform()) return OEFFENTLICHE_DOMAIN_NATIV;

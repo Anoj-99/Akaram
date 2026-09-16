@@ -75,17 +75,22 @@ npm run build   # Typecheck + Produktions-Build nach dist/
    `tamil-lernen.vercel.app` (Production-Deployments sind öffentlich,
    kein Vercel-Login nötig).
 
-### Eigene Domain (akaram.study)
+### Eigene Domain (akaram.app)
 
-Geplante Domain: **akaram.study**. Einrichtung: Domain beim Registrar
-kaufen → im Vercel-Projekt unter *Settings → Domains* `akaram.study`
-hinzufügen → die angezeigten DNS-Einträge (A-Record bzw. CNAME) beim
-Registrar setzen. Die vercel.app-Adresse leitet danach automatisch um.
+Domain: **akaram.app** (gekauft). Einrichtung: im Vercel-Projekt unter
+*Settings → Domains* `akaram.app` hinzufügen → die angezeigten
+DNS-Einträge (A-Record bzw. CNAME, alternativ Nameserver
+`ns1/ns2.vercel-dns.com`) beim Registrar (Porkbun) setzen. Die
+vercel.app-Adresse leitet danach automatisch um.
 
 Wichtig: Die Domain sollte stehen, **bevor** Lehrer QR-Codes drucken –
 der QR enthält die Web-Adresse, gedruckte Codes überleben einen
-Domain-Wechsel nicht. Im Code ist nichts fest verdrahtet (QR-Links
-nutzen `window.location`), ein Wechsel braucht also keine Code-Änderung.
+Domain-Wechsel nicht. Im Web-Code ist nichts fest verdrahtet (QR-Links
+nutzen `window.location`), ein Wechsel braucht dort also keine
+Code-Änderung. Einzige Ausnahme: `src/lib/oeffentlicheUrl.ts` enthält
+die Domain fest für die native iOS-App (dort funktioniert
+`window.location` nicht), dort ist bei einem Domain-Wechsel eine Zeile
+anzupassen.
 
 Falls bisher ein Vercel-Projekt mit Root Directory `tamil-lernen` im
 `tamilconnect`-Repo verbunden war: in den Projekt-Settings unter

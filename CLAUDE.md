@@ -12,12 +12,14 @@ Details zur Struktur: `docs/PLANUNG.md`, Einrichtung/Deployment: `README.md`.
 
 ## Offene Punkte / Merkzettel
 
-- **Domain:** Anoj holt zeitnah `akaram.study` bei **Porkbun**
-  (1. Jahr ~1,54 $, danach ~31 $/Jahr; IONOS führt `.study` nicht).
-  Danach: Nameserver auf Vercel (`ns1/ns2.vercel-dns.com`) stellen,
-  Domain im Vercel-Projekt hinzufügen, README-Abschnitt „Eigene Domain"
-  auf die Porkbun-Schritte aktualisieren. Wichtig: Domain muss stehen,
-  bevor Lehrer QR-Codes drucken (QR enthält die Web-Adresse).
+- **Domain:** `akaram.app` ist gekauft (IONOS), im Vercel-Projekt unter
+  *Settings → Domains* hinzugefügt, DNS von Vercel als korrekt erkannt
+  (`akaram.app` + `www.akaram.app`, Stand 16.09. beide „Generating SSL
+  Certificate" – läuft automatisch durch, kein weiterer Schritt nötig).
+  Code ist bereits auf `akaram.app` vorbereitet
+  (`src/lib/oeffentlicheUrl.ts`, README). Sobald das Zertifikat fertig
+  ist: kurz `https://akaram.app` im Browser prüfen, dann können Lehrer
+  QR-Codes drucken (QR enthält die Web-Adresse).
 - **Später geplant:** native App per Capacitor (App Store / Play Store);
   Haptik dann von `fehlerFeedback.ts` auf @capacitor/haptics umstellen.
 - **Assets fehlen noch:** echte Illustrationen statt
